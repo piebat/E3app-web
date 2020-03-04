@@ -1,0 +1,3 @@
+L'attività ha portato alla stesura di una Relazione Tecnica nella quale sono riportate le stime
+sulle quantità di sensori (Beacons) necessari all’ottenimento degli obbiettivi stabiliti.
+Sono inoltre in esso descritte le sperimentazioni ed i criteri per le scelte fatte.

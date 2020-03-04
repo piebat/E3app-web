@@ -1,0 +1,1 @@
+Con l’attività si è realizzata una relazione tecnica in cui sono riportati i risultati di un’approfondita indagine sulle applicazioni di localizzazione più moderne, basate su Wireless Sensor Networks (WSN), al fine di  individuare la soluzione più rispondente ed efficace  per gli obiettivi inerenti il progetto E3App.

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>E3App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/my.css">
+<style media="screen">
+
+.jumbo {
+background-image: url("/pic/bgh.jpg");
+background-size: cover;
+color: white;
+
+}
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+</style>
+</head>
+  <body>
+    <div class="jumbotron jumbo text-center" style="margin-bottom:0; ">
+      <h1>Emergency, Evacuation and Escape – App</h1>
+      <!-- <p>Resize this responsive page to see the effect!</p> -->
+    </div>
+    <nav class="navbar sticky-top navbar-light bg-light">
+  <a class="navbar-brand" href="/devdoc">Documenti</a>
+      </nav>
+
+      <div class="jumbotron text-center">
+        <h1>DOWNLOADS</h1>
+      </div>
+      <div class="container-fluid text-center">
+        <img src="phone.jpg" width="300px" alt="phone picture">
+        <hr>
+        <div class="row">
+          <!-- <div class="col-sm">
+            <button class="btn btn-primary btn-lg btn-block disabled" type="button" onclick="down(1)" name="button">Navigazione</button>
+          </div>
+          <div class="col-sm">
+            <hr>
+          </div>-->
+          <div class="col-sm">
+            <button class="btn btn-primary btn-lg btn-block " type="button" onclick="down(2)" name="button">Android App</button>
+          </div>
+        </div>
+      </div>
+          <div class="container-fluid text-center">
+  <div class="toast mx-auto bg-warning" data-autohide="false">
+  <div class="toast-header">
+    <strong class="mr-auto text-primary">Android Only</strong>
+    <small class="text-muted">close</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+  </div>
+  <div class="toast-body">
+    Il software è per dispositivi Android <br>
+    The software is for Android Devices only
+  </div>
+</div>
+
+    </div>
+    <div id="footer" >
+
+    </div>
+    <script>
+        //$("#mmenu").load("../mainMenu.html");
+        //$("#footer").load("../footer.html");
+        function down(app) {
+          var ua = navigator.userAgent.toLowerCase();
+          var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+          var carica = null;
+          if(isAndroid) {
+            // Do something!
+            // Redirect to Android-site?
+            switch (app) {
+              case 1:
+                carica="giroscopio.apk";
+                break;
+              case 2:
+                carica="app-debug.apk"
+                break;
+              default:
+
+            }
+            if (carica != null) {
+              window.location = 'download.php?path='+carica;
+            }
+          } else {
+              $('.toast').toast('show');
+          }
+        };
+
+    </script>
+  </body>
+</html>

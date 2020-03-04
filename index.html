@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>E3App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css" />
+  <link rel="stylesheet" href="css/grid-gallery.css">
+  <link rel="stylesheet" href="/css/my.css">
+
+<style media="screen">
+
+.jumbo {
+background-image: url("/pic/bgh.jpg");
+background-size: cover;
+color: white;
+
+}
+</style>
+</head>
+<body>
+
+<div class="jumbotron jumbo text-center" style="margin-bottom:0; ">
+  <h1>Emergency, Evacuation and Escape – App</h1>
+  <!-- <p>Resize this responsive page to see the effect!</p> -->
+</div>
+
+<div id="mmenu"></div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 col-h"> <h1> E3App </h1> </div>
+    <div class="col-sm-4">
+      <img src="pic/pic1.jpg" width="100%"alt="Picture of article" class="img-responsive" >
+    </div>
+    <div class="col-sm-4"> </div>
+  </div>
+  <div class="row">
+
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="articolo1" class="articolo shadow"></div>
+    </div>
+  </div>
+</div> <!--  container -->
+
+<hr>
+<div class="container-fluid shadow">
+
+
+<div class="container-fluid parallax">
+<section id="galleria" class="gallery-block grid-gallery">
+    <div class="container">
+        <div class="heading">
+            <h2 style="color:white;">Galleria Foto</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 item">
+              <a class="lightbox" href="/pic/gallery/PG1.jpg">
+                  <img class="img-fluid image scale-on-hover" src="/pic/gallery/PG1.jpg">
+              </a>
+                <h5 class="captionpg">Team Work</h5>
+          </div>
+          <div class="col-md-6 col-lg-4 item">
+              <a class="lightbox" href="/pic/gallery/PG2.jpg">
+                  <img class="img-fluid image scale-on-hover" src="/pic/gallery/PG2.jpg">
+              </a>
+              <h5 class="captionpg">Team working</h5>
+          </div>
+          <div class="col-md-6 col-lg-4 item">
+              <a class="lightbox" href="/pic/gallery/PG3.jpg">
+                  <img class="img-fluid image scale-on-hover" src="/pic/gallery/PG3.jpg">
+              </a>
+              <h5 class="captionpg">Team working</h5>
+          </div>
+        </div>
+          <div class="row">
+          <div class="col-md-6 col-lg-4 item">
+              <a class="lightbox" href="/pic/gallery/PG4.jpg">
+                  <img class="img-fluid image scale-on-hover" src="/pic/gallery/PG4.jpg">
+              </a>
+              <h5 class="captionpg">Team working</h5>
+          </div>
+          <div class="col-md-6 col-lg-4 item">
+              <a class="lightbox" href="/pic/gallery/PG5.jpg">
+                  <img class="img-fluid image scale-on-hover" src="/pic/gallery/PG5.jpg">
+              </a>
+              <h5 class="captionpg">Team working</h5>
+          </div>
+          <div class="col-md-6 col-lg-4 item">
+              <a class="lightbox" href="/pic/gallery/PG6.jpg">
+                  <img class="img-fluid image scale-on-hover" src="/pic/gallery/PG6.jpg">
+              </a>
+              <h5 class="captionpg">Team working</h5>
+          </div>
+        </div>
+    </div>
+</section>
+</div>
+
+</div>
+<hr>
+<!-- <div id="Obbiettivi" class="container-fluid shadow">
+  <article id="articolo2" class="articolo shadow"></article>
+</div> -->
+
+
+
+<div id="footer">
+
+</div>
+
+<script>
+
+$(document).ready(function(){
+    $("#mmenu").load("./mainMenu.html");
+    $("#articolo1").load("./articolo1.html");
+    $("#articolo2").load("./articolo2.html");
+    $("#articolo3").load("./articolo3.html");
+    $("#footer").load("./footer.html");
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.grid-gallery', { animation: 'slideIn'});
+</script>
+
+
+</body>
+</html>

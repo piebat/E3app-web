@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="style/index.css">
+<link rel="stylesheet" type="text/css" href="style/nav.css">
+<link rel="stylesheet" type="text/css" href="style/pulsanti.css">
+<link rel="stylesheet" type="text/css" href="style/customalert.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+<script type="text/javascript" src="javascript/nav.js"></script>
+<script type="text/javascript" src="javascript/draw.js"></script>
+<script type="text/javascript" src="javascript/customalert.js"></script>
+<script type="text/javascript" src="javascript/pulsanti.js"></script>
+
+<title>Pannello di controllo</title>
+</head>
+<body onload="cambiaPiano(#piano.value)">
+	<div class="topnav" id="myTopnav">
+		<a href="index.html" class="active">Inserimento e modifica Mappa</a>
+		<a href="messaggistica.html">Messaggistica</a>
+		<a href="#"style="background-color: red; margin-left: 1em;">Lancia emergenza</a>
+		<a href="javascript:void(0);" class="icon"> 
+		<i class="fa fa-bars"></i>
+		</a>
+	</div>
+
+	<div class="contenuto" id="contenuto">
+		<img id="img" alt="ponte di coperta" src="resources/pontedicoperta.jpg">
+	</div>
+	<div id="pulsanti">
+	<div id="initialNode" style="visibility: hidden;"></div>
+		<select class="pulsanti_azione pulsanti_options" id ="piano"
+			onchange="clearGraph(),cambiaPiano(this.value), caricaGrafo(),caricaHashmap()">
+			<option value="1">Piano 1</option>
+			<option value="2">Piano 2</option>
+			<option value="3">Piano 3</option>
+			<option value="4">Piano F</option>
+		</select>
+
+		<button class="pulsanti_azione" onclick= "clearGraph(),caricaGrafo(),caricaHashmap()">Carica Grafo</button>
+		<button class="pulsanti_azione" onclick= "startDrawNodes()">Aggiungi nodi</button>
+	
+		 <div id ="listanodi" > </div>
+		 <button class="pulsanti_azione" id="salvaGrafo" style="visibility: hidden;" onclick="saveGraph()"> Salva Grafo</button>
+		
+		
+	</div>
+	<div id="logoDiv">
+		<img id="logo" alt="E3APP" src="resources/E3APP.png">
+	</div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="registrazione.js"></script>
+</head>
+<body>
+
+<h3>Pannello di controllo</h3>
+
+<div class="container">
+  <form action="">
+    <label for="fname">Codice:</label>
+    <input type="text" id="codice" name="codice" placeholder="Codice..">
+
+    <label for="lname">Nome:</label>
+    <input type="text" id="nome" name="nome" placeholder="Nome..">
+
+	<label for="lname">Cognome:</label>
+    <input type="text" id="cgnome" name="cognome" placeholder="Cognome..">
+	
+	<label for="lname">Gruppo:</label>
+    <input type="text" id="gruppo" name="gruppo" placeholder="Gruppo..">
+
+	<label for="lname">Cabina:</label>
+    <input type="text" id="cabina" name="cabina" placeholder="Cabina..">
+
+
+    
+    <button onclick="inserisci()">Invia</button>
+  </form>
+</div>
+
+</body>
+</html>

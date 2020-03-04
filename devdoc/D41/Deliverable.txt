@@ -1,0 +1,6 @@
+L'attività ha prodotto una Relazione Tecnica in cui è presentato il processo di sviluppo eseguito per 
+la realizzazione degli applicativi con annessi prototipi implementati per
+arrivare a tali prodotti finali. Nella prima parte vengono illustrati i prototipi realizzati
+per la comprensione dei vari aspetti su cui il progetto si fonda mostrando dunque
+le demo Android e demo Java. Nell’ultima parte invece viene descritto lo stato attuale
+ di avanzamento dello sviluppo.

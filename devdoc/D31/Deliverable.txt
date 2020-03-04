@@ -1,0 +1,2 @@
+L'attività ha prodotto un Report Tecnico sulle soluzioni da adottare per  la gestione integrata d'informazioni non strutturate e strutturate, con la condivisione su rete telematica.
+Inoltre, definisce una soluzione di messaggistica Publish/Subscribe per la comunicazione su rete sia locale che remota, adatta sia allo scambio dei dati tra processi, sia allo scambio di brevi messaggi di testo tra utenti e tra utente e centrale operativa.

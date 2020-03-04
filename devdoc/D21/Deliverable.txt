@@ -1,0 +1,2 @@
+L'attività ha prodotto il Report sull'architettura HW/SW della soluzione d'adottare, analizzando
+le emergenti architetture e riportando le considerazioni fatte prima della scelta.

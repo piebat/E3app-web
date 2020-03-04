@@ -1,0 +1,84 @@
+.fakeimg {
+  height: 200px;
+  background: rgba(0,0,0,0);
+}
+
+/* Create the parallax scrolling effect */
+background-attachment: fixed, scroll;
+background-position: left;
+background-repeat: no-repeat;
+background-size:cover;
+}
+.caption
+{
+font-size: xx-small;
+}
+.articolo{
+font-family: 'Nunito', sans-serif;
+font-size: 1.2em;
+padding-left: 15%;
+padding-right: 15%;
+padding-bottom: 5%;
+}
+@media screen and (max-width: 600px) {
+.articolo {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+}
+.art_titolo{
+font-size: 2em;
+font-family: 'Nunito', sans-serif;
+font-weight: bold;
+text-transform: capitalize;
+}
+.col-h{
+text-align:center;
+font-size: 2em;
+font-family: 'Nunito', sans-serif;
+font-weight: bold;
+text-transform: capitalize;
+}
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+max-width: 100%;
+height: auto;
+}
+.bg {
+  background-color: rgba(50, 109, 168,0.5);
+}
+.foot {
+background-color: white;
+
+}
+
+/* parallax */
+body, html {
+  height: 100%;
+}
+@media screen and (min-width: 800px) {
+.parallax {
+  /* The image used */
+  background-image: url('/pic/gallery/img_parallax.jpg');
+
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+}
+.pgBackGround {
+  /* background-image: url('/pic/gallery/img_parallax.jpg'); */
+  background-color: black;
+}
+
+.captionpg {
+  font-family: 'McLaren', cursive;
+  text-align:  center;
+  color: white;
+}

@@ -1,0 +1,2 @@
+L'attività ha prodotto un Report Tecnico sull’algoritmo di navigazione indoor, con l’architettura software
+ a supporto.

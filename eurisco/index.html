@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EURISCO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/my.css">
+
+</head>
+<body>
+
+<div class="jumbotron text-center" style="margin-bottom:0; background-color: rgb(6, 33, 52)" >
+<img src="logo.png" alt="Logo eurisco">
+  <!-- <p>Resize this responsive page to see the effect!</p> -->
+</div>
+
+<div id="myMenu"></div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6 col-h"> <h1> EURISCO </h1> </div>
+    <div class="col-sm-6">
+      <img class="float-right" src="./Immagine_2.png" alt="Picture of article" class="img-responsive" width="500px">
+    </div>
+  </div>
+  <div class="row">
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div id="articolo1" class="articolo shadow"></div>
+    </div>
+    <div class="col-sm-6">
+      <div id="articolo2" class="articolo shadow"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+      <img class="float-right" src="./Immagine_4.png" alt="Picture of article" class="img-responsive" width="200px">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <a href="https://www.euriscoconsulting.com">
+        <button type="button" class="btn btn-primary float-right">Eurisco Home Page</button></a>
+    </div>
+  </div>
+
+</div> <!--  container -->
+<hr>
+
+
+<div id="footer">
+
+</div>
+<script>
+
+$(document).ready(function(){
+    $("#myMenu").load("../myMenu.html");
+    $("#articolo1").load("./articolo1.html");
+    $("#articolo2").load("./articolo2.html");
+    $("#articolo3").load("./articolo3.html");
+    $("#footer").load("../footer.html");
+});
+</script>
+</body>
+</html>
