@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=ISO-8859-1>
+<title>Pannello di controllo</title>
+
+<link rel="stylesheet" type="text/css" href="style/nav.css">
+	<link rel="stylesheet" type="text/css" href="style/customalert.css">
+	<link rel="stylesheet" href="style/inserimentobiglietto.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+	<script src="javascript/nav.js" type="text/javascript" ></script>
+	<script src="javascript/customalert.js" type="text/javascript" ></script>
+	<script src="javascript/config.js" type="text/javascript"></script>
+	<script src="javascript/inserimentobiglietto.js" type="text/javascript"></script>
+	
+	<script src="javascript/config.js" type="text/javascript"></script>
+	<script src="javascript/publish.js" type="text/javascript"></script>	
+	<script src="javascript/subscribe.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+		<a href="index.html" >Inserimento e modifica Mappa</a>
+		<a href="posizioneutenti.html">Posizione utenti</a>
+		<a href="inserimentobiglietto.html"  class="active">Registra Biglietto</a>
+		<a href="messaggistica.html">Messaggistica</a>
+		<a href="#"style="background-color: red; margin-left: 1em;" onclick="inviaMessaggioEmergenza('client/emergenza','Emergenza!')">Lancia emergenza</a>
+		<p id="stato_connessione" style="visibility: none"></p>
+		<a href="javascript:void(0);" class="icon"> 
+		<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	<h2 style="color:#4CAF50">Inserisci i dati del nuovo utente da registrare</h2>
+	<p>Codice:</p>
+	<input type="number" name="Codice" class="inserimentobiglettoformelement" id="codiceBiglietto" onchange="checkCodiceBiglietto()"> <input type="hidden" id="erroreCodice" value="OK">
+	<p>Nome:</p>
+	<input type="text" name="Nome" class="inserimentobiglettoformelement" id="nomeBiglietto">
+	<p>Cognome:</p>
+	<input type="text" name="Cognome" class="inserimentobiglettoformelement" id="cognomeBiglietto">
+	<p>Gruppo:</p>
+	<input type="text" name="Gruppo" class="inserimentobiglettoformelement" id="gruppoBiglietto">
+	<p>Cabina:</p>
+	<input type="text" name="Cabina" class="inserimentobiglettoformelement" id="cabinaBiglietto">
+	<br>
+	<button class="inserimentobiglettoformsubmit" onclick="inserisciBiglietto()">Registra </button>
+	</form>
+</body>
+</html>

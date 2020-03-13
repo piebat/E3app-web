@@ -1,3 +1,5 @@
+
+
 function changeTopic(topic){
 	if(topic=="*"){
 		$("#pannelloGruppi").html(""); 
@@ -55,10 +57,9 @@ function caricaSingolo(gruppo){
 			success: function(data){
 				//$('#load').hide();
 				if(data != "[]"){
-					stampaSingolo(data);
+					stampaSingolo(data, gruppo);
 				}
 				else{
-					customAlert("Non sono presenti gruppi");
 				}
 			},
 			error: function()
@@ -74,14 +75,16 @@ function caricaSingolo(gruppo){
 	}
 }
 
-function stampaSingolo(data) {
+function stampaSingolo(data, gruppo) {
 	$("#pannelloSingolo").html("");
 	var array = JSON.parse(data);
 	for(var i = 0; i < array.length; i++){
-		var newElement = '<input type="radio" name="singolo" value="'+$('input[name=gruppo]:checked', '#formMessaggistica').val()+'/'+array[i].Codice+'" onclick="changeTopic(this.value)"> <i class="radio-destinatari"> Codice: '+array[i].Codice+'Cognome: '+array[i].Cognome+' Nome: '+array[i].Nome+'</i>' 
+		var newElement = '<input type="radio" name="singolo" value="'+gruppo+'/'+array[i].Codice+'" onclick="changeTopic(this.value)"> <i class="radio-destinatari"> Codice: '+array[i].Codice+'Cognome: '+array[i].Cognome+' Nome: '+array[i].Nome+'</i>' 
 		$("#pannelloSingolo").html($("#pannelloSingolo").html()+" "+newElement);
 	}
 }
+
 function svuotaSingolo(){
 	$("#pannelloSingolo").html("");
+	$("#pannelloGruppo").html("");
 }

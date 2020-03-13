@@ -2,6 +2,8 @@ mqttClient = new Paho.MQTT.Client(hostname, port, clientId);
 mqttClient.onMessageArrived =  MessageArrived;
 mqttClient.onConnectionLost = ConnectionLost;
 
+var subscription = "msg/+";
+
 Connect();
 
 /*Initiates a connection to the MQTT broker*/

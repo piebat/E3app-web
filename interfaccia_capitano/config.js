@@ -4,3 +4,4 @@ var clientId = "webio4mqttexample";
 clientId += new Date().getUTCMilliseconds();;
 var username = "ftvtpagh";
 var passWord = "pwVsR6nQqWa6";
+var subscription = "test/+";

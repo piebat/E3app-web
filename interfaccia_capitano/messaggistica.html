@@ -13,26 +13,34 @@
 	<script src="javascript/config.js" type="text/javascript"></script>
 	<script src="javascript/publish.js" type="text/javascript"></script>	
 	<script src="javascript/subscribe.js" type="text/javascript"></script>
+	<script src="javascript/messaggistica.js" type="text/javascript"></script>
+
 	
 </head>
 <body>
 <div class="topnav" id="myTopnav">
 		<a href="index.html" >Inserimento e modifica Mappa</a>
+		<a href="posizioneutenti.html">Posizione utenti</a>
+		<a href="inserimentobiglietto.html" >Registra Biglietto</a>		
 		<a href="messaggistica.html" class="active">Messaggistica</a>
-		<a href="#"style="background-color: red; margin-left: 1em;">Lancia emergenza</a>
+		<a href="#"style="background-color: red; margin-left: 1em;" onclick="inviaMessaggioEmergenza('client/emergenza','Emergenza!')">Lancia emergenza</a>
+		
 		<a href="javascript:void(0);" class="icon"> 
 		<i class="fa fa-bars"></i>
 		</a>
 	</div>
 <p id="stato_connessione"></p>
 	<div>
-	
+	<input type="hidden" id="topic">
 	  <form>
 	  	<label for="Publisher">Seleziona i destinatari del messaggio</label>
 	  	<br>
-	  	<input type="radio" name="destinatari" value="tutti" checked="checked"> <i  class="radio-destinatari">Tutti</i>
-		<input type="radio" name="destinatari" value="gruppo"> <i class="radio-destinatari"> Singolo gruppo</i>
-		<input type="radio" name="destinatari" value="singolo"> <i class="radio-destinatari"> Singolo utente </i>
+	  	<input type="radio" name="destinatari" value="tutti" checked="checked" onclick="svuotaSingolo(),changeTopic('*')"> <i  class="radio-destinatari">Tutti</i>
+		<input type="radio" name="destinatari" value="gruppo" onclick=" svuotaSingolo(),caricaGruppi()"> <i class="radio-destinatari"> Singolo gruppo</i>
+		<input type="radio" name="destinatari" id="singolo" value="singolo" onclick="caricaGruppi()"> <i class="radio-destinatari"> Singolo utente </i>
+		<p id="pannelloGruppi"></p>
+		<p id="pannelloSingolo"></p>
+		
 	  	<br>
 	  	<label for="Publisher">Inserisci il messaggio: </label> 
 		

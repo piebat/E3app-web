@@ -10,18 +10,27 @@
 <link rel="stylesheet" type="text/css" href="style/pulsanti.css">
 <link rel="stylesheet" type="text/css" href="style/customalert.css">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+	
 <script type="text/javascript" src="javascript/nav.js"></script>
 <script type="text/javascript" src="javascript/draw.js"></script>
 <script type="text/javascript" src="javascript/customalert.js"></script>
 <script type="text/javascript" src="javascript/pulsanti.js"></script>
+<script src="javascript/config.js" type="text/javascript"></script>
+	<script src="javascript/publish.js" type="text/javascript"></script>	
+	<script src="javascript/subscribe.js" type="text/javascript"></script>
 
 <title>Pannello di controllo</title>
 </head>
 <body onload="cambiaPiano(#piano.value)">
 	<div class="topnav" id="myTopnav">
 		<a href="index.html" class="active">Inserimento e modifica Mappa</a>
+		<a href="posizioneutenti.html">Posizione utenti</a>
+		<a href="inserimentobiglietto.html">Registra Biglietto</a>
 		<a href="messaggistica.html">Messaggistica</a>
-		<a href="#"style="background-color: red; margin-left: 1em;">Lancia emergenza</a>
+		<a href="#"style="background-color: red; margin-left: 1em;" onclick="inviaMessaggioEmergenza('client/emergenza','Emergenza!')">Lancia emergenza</a>
+		<p id="stato_connessione" style="visibility: none"></p>
 		<a href="javascript:void(0);" class="icon"> 
 		<i class="fa fa-bars"></i>
 		</a>

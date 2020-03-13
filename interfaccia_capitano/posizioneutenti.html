@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="style/index.css">
+<link rel="stylesheet" type="text/css" href="style/nav.css">
+<link rel="stylesheet" type="text/css" href="style/pulsanti.css">
+<link rel="stylesheet" type="text/css" href="style/customalert.css">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>	
+<script type="text/javascript" src="javascript/nav.js"></script>
+<script type="text/javascript" src="javascript/draw.js"></script>
+<script type="text/javascript" src="javascript/customalert.js"></script>
+<script type="text/javascript" src="javascript/pulsanti.js"></script>
+<script src="javascript/config.js" type="text/javascript"></script>
+
+<script src="javascript/subscribePosizione.js" type="text/javascript"></script>
+<script src="javascript/publish.js" type="text/javascript"></script>	
+
+
+<title>Pannello di controllo</title>
+</head>
+<body>
+	<div class="topnav" id="myTopnav">
+		<a href="index.html">Inserimento e modifica Mappa</a>
+		<a href="posizioneutenti.html" class="active">Posizione utenti</a>
+		<a href="inserimentobiglietto.html" >Registra Biglietto</a>
+		<a href="messaggistica.html">Messaggistica</a>
+		<a href="#"style="background-color: red; margin-left: 1em;" onclick="inviaMessaggioEmergenza('client/emergenza','Emergenza!')">Lancia emergenza</a>
+		<p id="stato_connessione" style="visibility: none"></p>
+		<a href="javascript:void(0);" class="icon"> 
+		<i class="fa fa-bars"></i>
+		</a>
+	</div>
+	<div class="contenuto" id="contenuto">
+		<img id="img" alt="piano f" src="resources/pianof.jpeg">
+	</div>
+
+</body>
+</html>
